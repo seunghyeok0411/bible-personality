@@ -1,0 +1,284 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #3f51b5;
+  padding-bottom: 20px;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-family: 'Black Han Sans', sans-serif;
+  color: #3f51b5;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+#quiz {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3f51b5;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+#question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* 기존 버튼 스타일 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.choice-btn {
+  padding: 15px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.choice-btn:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-btn {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  color: #666;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* 결과 화면 스타일 */
+#result {
+  text-align: center;
+  flex: 1;
+}
+
+#resultImageContainer {
+  margin-bottom: 20px;
+}
+
+.result-image {
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid #3f51b5;
+}
+
+#resultTitle {
+  font-size: 2rem;
+  color: #3f51b5;
+  margin-bottom: 15px;
+}
+
+#resultDesc {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.bible-verse {
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #3f51b5;
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* 액션 버튼 스타일 */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.restart-btn {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.restart-btn:hover {
+  background-color: #303f9f;
+}
+
+.share-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.share-btn:hover {
+  background-color: #388e3c;
+}
+
+.print-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.print-btn:hover {
+  background-color: #f57c00;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+  }
+  
+  #question {
+    font-size: 1.3rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+  }
+}
+
+/* 질문별 미니 일러스트 스타일 */
+.question-illustration {
+  max-width: 100px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* 인쇄용 스타일 */
+@media print {
+  body {
+    background: none;
+  }
+  
+  .container {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .action-buttons, .back-btn {
+    display: none;
+  }
+}

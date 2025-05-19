@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바이블퍼스널 - 나와 닮은 성경 인물 찾기</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <h1 class="logo">바이블퍼스널</h1>
+      </div>
+      <p class="tagline">나와 닮은 성경 인물 찾기</p>
+    </header>
+    
+    <div id="quiz">
+      <div class="progress-container">
+        <div class="progress-text">
+          <span id="questionNumber">1/8</span> 질문
+        </div>
+        <div class="progress-bar-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+      
+      <p id="question">질문이 표시됩니다</p>
+      
+      <!-- 기존 버튼 방식 -->
+      <div class="button-container">
+        <button onclick="answer('A')" id="btnA" class="choice-btn">선택지 A</button>
+        <button onclick="answer('B')" id="btnB" class="choice-btn">선택지 B</button>
+      </div>
+      
+      <!-- 뒤로가기 버튼 -->
+      <button onclick="goBack()" id="backButton" class="back-btn">
+        <i class="fas fa-arrow-left"></i> 이전 질문
+      </button>
+    </div>
+    
+    <div id="result" style="display:none;">
+      <div id="resultImageContainer" style="display:none;">
+        <img id="resultImage" src="" alt="" class="result-image">
+      </div>
+      <h2 id="resultTitle"></h2>
+      <p id="resultDesc"></p>
+      <blockquote id="resultVerse" class="bible-verse"></blockquote>
+      
+      <div class="action-buttons">
+        <button onclick="restartTest()" class="action-btn restart-btn">
+          <i class="fas fa-redo"></i> 다시 테스트하기
+        </button>
+        <button onclick="shareResult()" class="action-btn share-btn">
+          <i class="fas fa-share-alt"></i> 결과 공유하기
+        </button>
+        <button onclick="printResult()" class="action-btn print-btn">
+          <i class="fas fa-print"></i> 결과 인쇄하기
+        </button>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 바이블퍼스널 - 모든 권리 보유</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
